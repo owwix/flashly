@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flashly — Flashcards, simple and offline</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">▣</span>
+      <h1>Flashly</h1>
+      <span class="tag">demo</span>
+    </div>
+    <nav class="nav">
+      <button data-view="decks" class="nav-btn active">Decks</button>
+      <button data-view="study" class="nav-btn" disabled>Study</button>
+      <button data-view="edit" class="nav-btn" disabled>Edit</button>
+    </nav>
+    <div class="actions">
+      <button id="import-btn" class="ghost">Import</button>
+      <button id="export-btn" class="ghost">Export</button>
+      <input type="file" id="import-file" accept="application/json" hidden />
+    </div>
+  </header>
+
+  <main id="app">
+    <!-- Decks view -->
+    <section id="view-decks" class="view active">
+      <div class="view-header">
+        <h2>Your decks</h2>
+        <button id="new-deck-btn" class="primary">+ New deck</button>
+      </div>
+      <div id="deck-grid" class="deck-grid"></div>
+    </section>
+
+    <!-- Study view -->
+    <section id="view-study" class="view">
+      <div class="study-header">
+        <button class="ghost back-to-decks">← Decks</button>
+        <div class="study-meta">
+          <h2 id="study-deck-name">—</h2>
+          <p id="study-progress">0 / 0</p>
+        </div>
+        <div class="study-controls-top">
+          <button id="shuffle-btn" class="ghost">Shuffle</button>
+          <button id="reset-btn" class="ghost">Reset</button>
+        </div>
+      </div>
+
+      <div class="card-stage">
+        <div id="flashcard" class="flashcard">
+          <div class="card-face card-front">
+            <span class="card-label">Front</span>
+            <p id="card-front-text">Click a deck to start</p>
+          </div>
+          <div class="card-face card-back">
+            <span class="card-label">Back</span>
+            <p id="card-back-text"></p>
+          </div>
+        </div>
+        <p class="hint">Click card or press <kbd>Space</kbd> to flip</p>
+      </div>
+
+      <div class="study-controls">
+        <button id="prev-btn" class="ghost">← Prev</button>
+        <div class="rating">
+          <button class="rate" data-rate="again">Again</button>
+          <button class="rate" data-rate="good">Good</button>
+          <button class="rate" data-rate="easy">Easy</button>
+        </div>
+        <button id="next-btn" class="ghost">Next →</button>
+      </div>
+
+      <div class="progress-bar"><div id="progress-fill"></div></div>
+    </section>
+
+    <!-- Edit view -->
+    <section id="view-edit" class="view">
+      <div class="view-header">
+        <button class="ghost back-to-decks">← Decks</button>
+        <input id="edit-deck-name" class="title-input" placeholder="Deck name" />
+        <div>
+          <button id="study-from-edit" class="ghost">Study</button>
+          <button id="delete-deck-btn" class="danger">Delete deck</button>
+        </div>
+      </div>
+
+      <div class="cards-editor">
+        <div id="cards-list" class="cards-list"></div>
+        <button id="add-card-btn" class="primary wide">+ Add card</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

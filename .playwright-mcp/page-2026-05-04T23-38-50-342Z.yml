@@ -1,0 +1,39 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - generic [ref=e4]: ▣
+      - heading "Flashly" [level=1] [ref=e5]
+      - generic [ref=e6]: demo
+    - navigation [ref=e7]:
+      - button "Decks" [ref=e8] [cursor=pointer]
+      - button "Study" [ref=e9] [cursor=pointer]
+      - button "Edit" [ref=e10] [cursor=pointer]
+    - generic [ref=e11]:
+      - button "Import" [ref=e12] [cursor=pointer]
+      - button "Export" [ref=e13] [cursor=pointer]
+  - main [ref=e14]:
+    - generic [ref=e62]:
+      - generic [ref=e63]:
+        - button "← Decks" [ref=e64] [cursor=pointer]
+        - generic [ref=e65]:
+          - heading "Biology 101 — Cell Structure" [level=2] [ref=e66]
+          - paragraph [ref=e67]: 1 / 6
+        - generic [ref=e68]:
+          - button "Shuffle" [ref=e69] [cursor=pointer]
+          - button "Reset" [ref=e70] [cursor=pointer]
+      - generic [ref=e71]:
+        - generic [ref=e72] [cursor=pointer]:
+          - generic [ref=e73]:
+            - generic [ref=e74]: Front
+            - paragraph [ref=e75]: What is the powerhouse of the cell?
+          - generic [ref=e76]:
+            - generic [ref=e77]: Back
+            - paragraph [ref=e78]: Mitochondria — they produce ATP via cellular respiration.
+        - paragraph [ref=e79]: Click card or press Space to flip
+      - generic [ref=e80]:
+        - button "← Prev" [ref=e81] [cursor=pointer]
+        - generic [ref=e82]:
+          - button "Again" [ref=e83] [cursor=pointer]
+          - button "Good" [ref=e84] [cursor=pointer]
+          - button "Easy" [ref=e85] [cursor=pointer]
+        - button "Next →" [ref=e86] [cursor=pointer]
